@@ -32,3 +32,25 @@ Content-Type: application/json
     "owner": "ron",
     "content": "updating post"
 }
+
+###
+
+POST http://localhost:3000/comments
+Content-Type: application/json
+
+{
+    "user": "ron",
+    "content": "noooooo",
+    "postId": "673e107c377444bb6854fda3"
+}
+
+###
+
+PUT http://localhost:3000/posts/673e107c377444bb6854fda3
+Content-Type: application/json
+
+{
+    "title": "Hiiiiiiii",
+    "owner": "ron",
+    "content": "updating post"
+}
