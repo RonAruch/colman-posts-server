@@ -39,8 +39,8 @@ POST http://localhost:3000/comments
 Content-Type: application/json
 
 {
-    "user": "ron",
-    "content": "noooooo",
+    "user": "noam",
+    "content": "yesssssss",
     "postId": "673e107c377444bb6854fda3"
 }
 
@@ -54,3 +54,15 @@ Content-Type: application/json
     "owner": "ron",
     "content": "updating post"
 }
+
+###
+
+GET http://localhost:3000/comments
+
+###
+
+GET http://localhost:3000/comments?user=ron
+
+###
+
+GET http://localhost:3000/comments/673e205e72efe0772f2c0d7b
