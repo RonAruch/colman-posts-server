@@ -7,6 +7,8 @@ router.get("/", commentsController.getAllComments);
 
 router.get("/:id", commentsController.getCommentById);
 
+router.get("/post/:postId", commentsController.getCommentByPostId);
+
 router.post("/", commentsController.createComment);
 
 router.put("/:id", commentsController.updateComment);

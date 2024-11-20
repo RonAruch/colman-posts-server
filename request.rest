@@ -66,3 +66,7 @@ GET http://localhost:3000/comments?user=ron
 ###
 
 GET http://localhost:3000/comments/673e205e72efe0772f2c0d7b
+
+###
+
+GET http://localhost:3000/comments/post/673e107c377444bb6854fda3
