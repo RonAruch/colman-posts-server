@@ -10,3 +10,25 @@ GET http://localhost:3000/posts?sender=noam
 ###
 
 GET http://localhost:3000/posts/673e107c377444bb6854fda3
+
+###
+
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+    "title": "Check",
+    "owner": "Noam",
+    "content": "checking..."
+}
+
+###
+
+PUT http://localhost:3000/posts/673e107c377444bb6854fda3
+Content-Type: application/json
+
+{
+    "title": "Hiiiiiiii",
+    "owner": "ron",
+    "content": "updating post"
+}
