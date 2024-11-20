@@ -39,8 +39,9 @@ const updatePost = async (req, res) => {
   const postNewData = req.body;
 
   try {
-    await PostModel.updateOne({ id: postId }, postNewData);
-    res.status(201).send();
+    const result = await PostModel.updateOne({ _id: postId }, postNewData);
+    if (result.modifiedCount > 0) res.status(201).send();
+    else throw new Error("post not found");
   } catch (error) {
     res.status(400).send(error.message);
   }

@@ -29,6 +29,6 @@ Content-Type: application/json
 
 {
     "title": "Hiiiiiiii",
-    "owner": "Noam",
+    "owner": "ron",
     "content": "updating post"
 }
