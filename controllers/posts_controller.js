@@ -24,7 +24,31 @@ const getPostById = async (req, res) => {
   }
 };
 
+const createPost = async (req, res) => {
+  const postToCreate = req.body;
+  try {
+    const post = await PostModel.create(postToCreate);
+    res.status(201).send(post);
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+};
+
+const updatePost = async (req, res) => {
+  const postId = req.params.id;
+  const postNewData = req.body;
+
+  try {
+    await PostModel.updateOne({ id: postId }, postNewData);
+    res.status(201).send();
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+};
+
 module.exports = {
   getAllPosts,
   getPostById,
+  createPost,
+  updatePost,
 };
